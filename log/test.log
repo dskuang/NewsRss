@@ -3838,3 +3838,149 @@ Completed 404 Not Found in 2ms
   [1m[36m (8.1ms)[0m  [1mTRUNCATE TABLE "public"."feeds", "public"."entries", "public"."users" RESTART IDENTITY CASCADE;[0m
   [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "entries" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
   [1m[36m (4.0ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (33.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (116.6ms)[0m  INSERT INTO "feeds" ("created_at", "title", "updated_at", "url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:54:53 UTC +00:00], ["title", "Lorem ipsum feed for an interval of 10 seconds"], ["updated_at", Tue, 15 Sep 2015 18:54:53 UTC +00:00], ["url", "http://lorem-rss.herokuapp.com/feed?unit=second&interval=10"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (24.8ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Started GET "/users/new" for 127.0.0.1 at 2015-09-15 11:54:53 -0700
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 188ms (Views: 186.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Started GET "/users/new" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started GET "/users/new" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+Started POST "/users" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"45eQUrSPjHXHKINs6HDIJvgKG7UgmwF6RH/Pc4Na81g=", "users"=>{"username"=>"ginger_baker", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00], ["password_digest", "$2a$10$ulqVw8TZPoyxfbL1Y6huN.vBLPcuqIRRF.vq3hCE3gsktaZyICDza"], ["session_token", "LRNmYzpeo4Fq98F5OzTSAQ"], ["updated_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00], ["username", "ginger_baker"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (12.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = 72[0m  [["session_token", "2nE69DT5dFJyz4y3V4Hd9Q"], ["updated_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+Redirected to http://www.example.com/users/72
+Completed 302 Found in 97ms (ActiveRecord: 13.9ms)
+Started GET "/users/72" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "72"]]
+  [1m[35mUser Load (15.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" = '2nE69DT5dFJyz4y3V4Hd9Q' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_token" = '2nE69DT5dFJyz4y3V4Hd9Q' LIMIT 1[0m
+Completed 200 OK in 41ms (Views: 23.4ms | ActiveRecord: 16.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Started GET "/users/new" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+Started POST "/users" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"QPxgko6e33w2H/fUoHAxNjqXDclmUxpROyLDFaNpt6w=", "users"=>{"username"=>"ginger_baker", "password"=>"[FILTERED]"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "password_digest", "session_token", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00], ["password_digest", "$2a$10$Rj1bKsLtqqT7xvFX9krMXukf5G7C5DOPiaH8.z5CxVbeZyVQMVCuO"], ["session_token", "swVw3cfAq7Nr7ypEFpQT6g"], ["updated_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00], ["username", "ginger_baker"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = 73[0m  [["session_token", "HH6W9UQu03iwASbP86PiBw"], ["updated_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Redirected to http://www.example.com/users/73
+Completed 302 Found in 83ms (ActiveRecord: 1.4ms)
+Started GET "/users/73" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "73"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" = 'HH6W9UQu03iwASbP86PiBw' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_token" = 'HH6W9UQu03iwASbP86PiBw' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Started GET "/session/new" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Started GET "/session/new" for 127.0.0.1 at 2015-09-15 11:54:54 -0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "feeds" ("created_at", "title", "updated_at", "url") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00], ["title", "Lorem ipsum feed for an interval of 10 seconds"], ["updated_at", Tue, 15 Sep 2015 18:54:54 UTC +00:00], ["url", "http://lorem-rss.herokuapp.com/feed?unit=second&interval=10"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2015-09-15 11:55:13 -0700
+Processing by StaticPagesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.9ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-09-15 11:55:13 -0700
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-09-15 11:55:13 -0700
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 11:55:14 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (1.8ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 1.8ms)
+  [1m[35m (26.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "feeds" DISABLE TRIGGER ALL;ALTER TABLE "entries" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (5.7ms)[0m  [1m SELECT schemaname || '.' || tablename
+ FROM pg_tables
+ WHERE
+ tablename !~ '_prt_' AND
+ tablename <> 'schema_migrations' AND
+ schemaname = ANY (current_schemas(false))
+[0m
+  [1m[35m (1.5ms)[0m  select table_name from information_schema.views where table_schema = 'test_database_name'
+  [1m[36m (21.5ms)[0m  [1mTRUNCATE TABLE "public"."feeds", "public"."entries", "public"."users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "feeds" ENABLE TRIGGER ALL;ALTER TABLE "entries" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (3.1ms)[0m  [1mROLLBACK[0m

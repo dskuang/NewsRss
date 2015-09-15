@@ -1,7 +1,3 @@
-
-
-* [Live Demo](http://newsrss.herokuapp.com/)
-
 To run locally:
 
 * `bundle install`
