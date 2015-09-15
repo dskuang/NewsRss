@@ -3,8 +3,23 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
-development:
+default: &default
   adapter: postgresql
-  database: news_reader_dev
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  encoding: unicode
   pool: 5
-  timeout: 5000
+
+
+development:
+  <<: *default
+  database: "development_database_name"
+
+test:
+  <<: *default
+  database: "test_database_name"
+
+production:
+  <<: *default
+  database: "production_database_name"

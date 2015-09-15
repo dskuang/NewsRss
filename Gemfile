@@ -11,7 +11,7 @@ gem 'bootstrap-sass'
 gem 'simple-rss'
 gem 'backbone-on-rails'
 gem 'ejs'
-gem 'byebug'
+
 gem 'serialize_json-rails'
 
 group :doc do
@@ -26,5 +26,9 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0', require: "bcrypt"
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'byebug'
+  gem 'capybara', '~> 2.4.4'
+  gem 'launchy'
+  gem 'rspec-rails', '~> 3.1.0'
+  gem 'shoulda-matchers'
 end
