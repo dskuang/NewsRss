@@ -27,8 +27,15 @@ gem 'bcrypt-ruby', '~> 3.0.0', require: "bcrypt"
 
 group :development, :test do
   gem 'byebug'
-  gem 'capybara', '~> 2.4.4'
+  gem 'jasmine-core', github: 'pivotal/jasmine'
+  gem 'jasmine', github: 'pivotal/jasmine-gem'
+  gem 'factory_girl_rails'
   gem 'launchy'
+  gem 'faker'
+  gem 'capybara', '~> 2.4.4'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem "chromedriver-helper"
 end

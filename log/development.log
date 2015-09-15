@@ -28034,3 +28034,1238 @@ Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 19:04:20 -0700
 Processing by Api::FeedsController#index as JSON
   [1m[36mFeed Load (26.3ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
 Completed 200 OK in 155ms (Views: 48.6ms | ActiveRecord: 52.2ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 229ms (Views: 228.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:13:13 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (1.8ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 39ms (Views: 7.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/feeds/2" for 127.0.0.1 at 2015-09-14 22:15:40 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mFeed Load (1.0ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mSQL (14.1ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-09-15 05:15:40.993654' WHERE "feeds"."id" = 2[0m
+  [1m[35m (0.6ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 05:15:41 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1850886"], ["json", "{\"title\":\"The Dismal State of America’s Decade-Old Voting Machines\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49da0c5a/sc/7/l/0L0Swired0N0C20A150C0A90Cdismal0Estate0Eamericas0Edecade0Eold0Evoting0Emachines0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/GettyImages-468646130-660x433.jpg\\\" alt=\\\"The Dismal State of America\\u0026amp;#8217;s Decade-Old Voting Machines\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Some election officials scour eBay for decommissioned equipment they can cannibalize for parts.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/dismal-state-americas-decade-old-voting-machines/\\\"\\u0026gt;The Dismal State of America\\u0026amp;#8217;s Decade-Old Voting Machines\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385725829/u/0/f/661370/c/35185/s/49da0c5a/sc/7/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49da0c5a/sc/7/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/dismal-state-americas-decade-old-voting-machines/#comments\",\"pubDate\":\"2015-09-14T21:01:54-07:00\",\"category\":\"election 2016\",\"guid\":\"http://www.wired.com/?p=1850886\",\"dc_creator\":\"Kim Zetter\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49da0c5a/sc/7/l/0L0Swired0N0C20A150C0A90Cdismal0Estate0Eamericas0Edecade0Eold0Evoting0Emachines0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 04:01:54 UTC +00:00], ["title", "The Dismal State of America’s Decade-Old Voting Machines"], ["updated_at", Tue, 15 Sep 2015 05:15:41 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mEntry Load (1.3ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 2]]
+Completed 200 OK in 1023ms (Views: 1000.3ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:15:45 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.8ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/feed" for 127.0.0.1 at 2015-09-14 22:19:08 -0700
+
+ActionController::RoutingError (No route matches [GET] "/feed"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.3) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.3) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.3) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.3) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.3) lib/rack/lock.rb:17:in `call'
+  rack (1.5.3) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.3) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (18.6ms)
+  Rendered /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (45.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 22:19:12 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-14 22:19:12 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-14 22:19:12 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:19:13 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.7ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:19:52 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:21:02 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:24:26 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (2.7ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:28:17 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.4ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2015-09-14 22:30:02 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.5ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-09-15 05:30:02.267730' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442295000"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:30:00+00:00\",\"link\":\"http://example.com/test/1442295000\",\"description\":\"Sint do excepteur voluptate duis reprehenderit aliquip culpa magna incididunt ut nulla officia quis eu.\",\"pubDate\":\"2015-09-14T22:30:00-07:00\",\"guid\":\"http://example.com/test/1442295000\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442295000"], ["published_at", Tue, 15 Sep 2015 05:30:00 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:30:00+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294990"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:29:50+00:00\",\"link\":\"http://example.com/test/1442294990\",\"description\":\"Non veniam excepteur aliquip cupidatat labore ipsum.\",\"pubDate\":\"2015-09-14T22:29:50-07:00\",\"guid\":\"http://example.com/test/1442294990\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294990"], ["published_at", Tue, 15 Sep 2015 05:29:50 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:29:50+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294980"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:29:40+00:00\",\"link\":\"http://example.com/test/1442294980\",\"description\":\"Aliqua commodo labore commodo Lorem cillum cillum.\",\"pubDate\":\"2015-09-14T22:29:40-07:00\",\"guid\":\"http://example.com/test/1442294980\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294980"], ["published_at", Tue, 15 Sep 2015 05:29:40 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:29:40+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294970"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:29:30+00:00\",\"link\":\"http://example.com/test/1442294970\",\"description\":\"Aute minim voluptate nisi tempor ex duis adipisicing do sint velit veniam.\",\"pubDate\":\"2015-09-14T22:29:30-07:00\",\"guid\":\"http://example.com/test/1442294970\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294970"], ["published_at", Tue, 15 Sep 2015 05:29:30 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:29:30+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294960"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:29:20+00:00\",\"link\":\"http://example.com/test/1442294960\",\"description\":\"Fugiat anim id proident consequat esse enim est irure veniam reprehenderit ea.\",\"pubDate\":\"2015-09-14T22:29:20-07:00\",\"guid\":\"http://example.com/test/1442294960\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294960"], ["published_at", Tue, 15 Sep 2015 05:29:20 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:29:20+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294950"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:29:10+00:00\",\"link\":\"http://example.com/test/1442294950\",\"description\":\"Elit anim sunt velit elit ea cupidatat aliquip occaecat sint culpa laborum amet nisi eu.\",\"pubDate\":\"2015-09-14T22:29:10-07:00\",\"guid\":\"http://example.com/test/1442294950\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294950"], ["published_at", Tue, 15 Sep 2015 05:29:10 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:29:10+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294940"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:29:00+00:00\",\"link\":\"http://example.com/test/1442294940\",\"description\":\"Duis deserunt consequat do incididunt excepteur cupidatat sint sunt eu non eu et magna voluptate.\",\"pubDate\":\"2015-09-14T22:29:00-07:00\",\"guid\":\"http://example.com/test/1442294940\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294940"], ["published_at", Tue, 15 Sep 2015 05:29:00 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:29:00+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294930"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:28:50+00:00\",\"link\":\"http://example.com/test/1442294930\",\"description\":\"Incididunt nostrud adipisicing ut id non amet aliquip fugiat do commodo aliqua.\",\"pubDate\":\"2015-09-14T22:28:50-07:00\",\"guid\":\"http://example.com/test/1442294930\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294930"], ["published_at", Tue, 15 Sep 2015 05:28:50 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:28:50+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294920"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:28:40+00:00\",\"link\":\"http://example.com/test/1442294920\",\"description\":\"Nisi pariatur qui incididunt in duis.\",\"pubDate\":\"2015-09-14T22:28:40-07:00\",\"guid\":\"http://example.com/test/1442294920\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294920"], ["published_at", Tue, 15 Sep 2015 05:28:40 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:28:40+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442294910"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T05:28:30+00:00\",\"link\":\"http://example.com/test/1442294910\",\"description\":\"Amet fugiat cillum laboris cillum cupidatat do magna veniam eiusmod mollit laborum tempor.\",\"pubDate\":\"2015-09-14T22:28:30-07:00\",\"guid\":\"http://example.com/test/1442294910\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442294910"], ["published_at", Tue, 15 Sep 2015 05:28:30 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T05:28:30+00:00"], ["updated_at", Tue, 15 Sep 2015 05:30:02 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (0.6ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 1]]
+Completed 200 OK in 298ms (Views: 285.1ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:30:03 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.8ms)[0m  SELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/feeds/2" for 127.0.0.1 at 2015-09-14 22:30:04 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mFeed Load (0.9ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mSQL (1.2ms)[0m  UPDATE "feeds" SET "updated_at" = '2015-09-15 05:30:04.907619' WHERE "feeds"."id" = 2
+  [1m[36m (0.4ms)[0m  [1mSELECT "entries"."guid" FROM "entries"[0m
+  [1m[35mEntry Load (0.9ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 2]]
+Completed 200 OK in 377ms (Views: 371.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-14 22:30:10 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (2.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 2.5ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/appacademy/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-15 10:16:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 655ms (Views: 653.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:31 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 10:16:32 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (1.2ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 140ms (Views: 69.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/feeds/2" for 127.0.0.1 at 2015-09-15 10:29:52 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mFeed Load (1.8ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mSQL (25.2ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-09-15 17:29:52.767973' WHERE "feeds"."id" = 2[0m
+  [1m[35m (0.7ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851182"], ["json", "{\"title\":\"What’s So Special About Low Earth Orbit?\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dfca82/sc/32/l/0L0Swired0N0C20A150C0A90Cwhats0Especial0Elow0Eearth0Eorbit0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/18964422099_a371167fa5_o-660x439.jpg\\\" alt=\\\"What\\u0026amp;#8217;s So Special About Low Earth Orbit?\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Just about all of our human exploration of space has been in low Earth orbit, but what exactly is it and why is it special?\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/whats-special-low-earth-orbit/\\\"\\u0026gt;What\\u0026amp;#8217;s So Special About Low Earth Orbit?\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385848160/u/0/f/661370/c/35185/s/49dfca82/sc/32/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dfca82/sc/32/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/whats-special-low-earth-orbit/#comments\",\"pubDate\":\"2015-09-15T09:32:22-07:00\",\"category\":\"Energy\",\"guid\":\"http://www.wired.com/?p=1851182\",\"dc_creator\":\"Rhett Allain\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dfca82/sc/32/l/0L0Swired0N0C20A150C0A90Cwhats0Especial0Elow0Eearth0Eorbit0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 16:32:22 UTC +00:00], ["title", "What’s So Special About Low Earth Orbit?"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851342"], ["json", "{\"title\":\"Thanks to VR, Your Next Business Meeting Might Be With Robots\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dfc6f8/sc/23/l/0L0Swired0N0C20A150C0A90Caltspace0Evr0Evirtual0Emeeting0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/exhibition-base-screen-1920x1080-660x371.jpg\\\" alt=\\\"Thanks to VR, Your Next Business Meeting Might Be With Robots\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Virtual reality company AltspaceVR is trying to make HMDs the next must-have office accoutrement.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/altspace-vr-virtual-meeting/\\\"\\u0026gt;Thanks to VR, Your Next Business Meeting Might Be With Robots\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385847309/u/0/f/661370/c/35185/s/49dfc6f8/sc/23/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dfc6f8/sc/23/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/altspace-vr-virtual-meeting/#comments\",\"pubDate\":\"2015-09-15T09:16:06-07:00\",\"category\":\"telepresence\",\"guid\":\"http://www.wired.com/?p=1851342\",\"dc_creator\":\"Peter Rubin\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dfc6f8/sc/23/l/0L0Swired0N0C20A150C0A90Caltspace0Evr0Evirtual0Emeeting0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 16:16:06 UTC +00:00], ["title", "Thanks to VR, Your Next Business Meeting Might Be With Robots"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1849605"], ["json", "{\"title\":\"Hacking the Inner Ear for VR—and for Science\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dfc6fc/sc/32/l/0L0Swired0N0C20A150C0A90Chacking0Einner0Eear0Evrand0Escience0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/FEATURED-532483451-660x330.jpg\\\" alt=\\\"Hacking the Inner Ear for VR\\u0026amp;#8212;and for Science\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Galvanic vestibular stimulation is a centuries-old technique for tricking the brain. \\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/hacking-inner-ear-vrand-science/\\\"\\u0026gt;Hacking the Inner Ear for VR\\u0026amp;#8212;and for Science\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385847308/u/0/f/661370/c/35185/s/49dfc6fc/sc/32/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dfc6fc/sc/32/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/hacking-inner-ear-vrand-science/#comments\",\"pubDate\":\"2015-09-15T09:13:38-07:00\",\"category\":\"Neuroscience\",\"guid\":\"http://www.wired.com/?p=1849605\",\"dc_creator\":\"Sarah Zhang\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dfc6fc/sc/32/l/0L0Swired0N0C20A150C0A90Chacking0Einner0Eear0Evrand0Escience0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 16:13:38 UTC +00:00], ["title", "Hacking the Inner Ear for VR—and for Science"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851473"], ["json", "{\"title\":\"Jeff Bezos Is Bringing His Space Company to Florida\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49df10d5/sc/28/l/0L0Swired0N0C20A150C0A90Cjeff0Ebezos0Ebringing0Espace0Ecompany0Eflordia0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/04/blueorigin_launch-ft-660x420.jpg\\\" alt=\\\"Jeff Bezos Is Bringing His Space Company to Florida\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Blue Origin, Amazon founder Jeff Bezos' commercial space company, plans to launch rockets from Cape Canaveral.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/jeff-bezos-bringing-space-company-flordia/\\\"\\u0026gt;Jeff Bezos Is Bringing His Space Company to Florida\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385867028/u/0/f/661370/c/35185/s/49df10d5/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49df10d5/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/jeff-bezos-bringing-space-company-flordia/#comments\",\"pubDate\":\"2015-09-15T08:33:05-07:00\",\"category\":\"NASA\",\"guid\":\"http://www.wired.com/?p=1851473\",\"dc_creator\":\"Klint Finley\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49df10d5/sc/28/l/0L0Swired0N0C20A150C0A90Cjeff0Ebezos0Ebringing0Espace0Ecompany0Eflordia0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 15:33:05 UTC +00:00], ["title", "Jeff Bezos Is Bringing His Space Company to Florida"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851550"], ["json", "{\"title\":\"The First Bloodborne Expansion Drops in November\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49df0dc9/sc/27/l/0L0Swired0N0C20A150C0A90Cfirst0Ebloodborne0Eexpansion0Edrops0Enovember0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/bloodborne_the_old_hunters_V2-660x371.jpg\\\" alt=\\\"The First Bloodborne Expansion Drops in November\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Sony's PlayStation 4-exclusive macabre monster-grindhouse gets its first piece of downloadable content two days before Thanksgiving.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/first-bloodborne-expansion-drops-november/\\\"\\u0026gt;The First \\u0026lt;em\\u0026gt;Bloodborne\\u0026lt;/em\\u0026gt; Expansion Drops in November\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385866303/u/0/f/661370/c/35185/s/49df0dc9/sc/27/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49df0dc9/sc/27/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/first-bloodborne-expansion-drops-november/#comments\",\"pubDate\":\"2015-09-15T08:07:16-07:00\",\"category\":\"PlayStation 4\",\"guid\":\"http://www.wired.com/?p=1851550\",\"dc_creator\":\"Matt Peckham\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49df0dc9/sc/27/l/0L0Swired0N0C20A150C0A90Cfirst0Ebloodborne0Eexpansion0Edrops0Enovember0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 15:07:16 UTC +00:00], ["title", "The First Bloodborne Expansion Drops in November"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851030"], ["json", "{\"title\":\"Etsy Embraces Mass-Manufacturing\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49def008/sc/24/l/0L0Swired0N0C20A150C0A90Cetsy0Eembraces0Emass0Emanufacturing0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/GettyImages-470714692-660x330.jpg\\\" alt=\\\"Etsy Embraces Mass-Manufacturing\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;The ecommerce platform will soon pair designers with manufacturers.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/etsy-embraces-mass-manufacturing/\\\"\\u0026gt;Etsy Embraces Mass-Manufacturing\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385759293/u/0/f/661370/c/35185/s/49def008/sc/24/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49def008/sc/24/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/etsy-embraces-mass-manufacturing/#comments\",\"pubDate\":\"2015-09-15T07:24:20-07:00\",\"category\":\"Etsy\",\"guid\":\"http://www.wired.com/?p=1851030\",\"dc_creator\":\"Klint Finley\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49def008/sc/24/l/0L0Swired0N0C20A150C0A90Cetsy0Eembraces0Emass0Emanufacturing0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 14:24:20 UTC +00:00], ["title", "Etsy Embraces Mass-Manufacturing"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851189"], ["json", "{\"title\":\"Be Happy the New Apple TV Ditches the Web\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49de0ff7/sc/15/l/0L0Swired0N0C20A150C0A90Capple0Etv0Eweb0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/GettyImages-4874390681-660x441.jpg\\\" alt=\\\"Be Happy the New Apple TV Ditches the Web\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;This is a good thing for smart TV. \\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/apple-tv-web/\\\"\\u0026gt;Be Happy the New Apple TV Ditches the Web\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385789077/u/0/f/661370/c/35185/s/49de0ff7/sc/15/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49de0ff7/sc/15/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/apple-tv-web/#comments\",\"pubDate\":\"2015-09-15T06:09:25-07:00\",\"category\":\"Webkit\",\"guid\":\"http://www.wired.com/?p=1851189\",\"dc_creator\":\"Brian Barrett\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49de0ff7/sc/15/l/0L0Swired0N0C20A150C0A90Capple0Etv0Eweb0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 13:09:25 UTC +00:00], ["title", "Be Happy the New Apple TV Ditches the Web"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851054"], ["json", "{\"title\":\"Wilson’s New Smart Basketball Magically Tracks Your Stats\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49ddc723/sc/28/l/0L0Swired0N0C20A150C0A90Cwilsons0Enew0Esmart0Ebasketball0Emagically0Etracks0Estats0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/WTBxxxxxx_Wx_Basketball_Packaging_3-660x495.jpg\\\" alt=\\\"Wilson\\u0026amp;#8217;s New Smart Basketball Magically Tracks Your Stats\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;With an embedded sensor and ingenious algorithms, the Wilson X Connected Basketball automatically tracks made and missed shots. \\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/wilsons-new-smart-basketball-magically-tracks-stats/\\\"\\u0026gt;Wilson\\u0026amp;#8217;s New Smart Basketball Magically Tracks Your Stats\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385858296/u/0/f/661370/c/35185/s/49ddc723/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49ddc723/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/wilsons-new-smart-basketball-magically-tracks-stats/#comments\",\"pubDate\":\"2015-09-15T06:05:16-07:00\",\"category\":\"Gadget Lab\",\"guid\":\"http://www.wired.com/?p=1851054\",\"dc_creator\":\"Tim Moynihan\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49ddc723/sc/28/l/0L0Swired0N0C20A150C0A90Cwilsons0Enew0Esmart0Ebasketball0Emagically0Etracks0Estats0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 13:05:16 UTC +00:00], ["title", "Wilson’s New Smart Basketball Magically Tracks Your Stats"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851531"], ["json", "{\"title\":\"Campaign Donation Buttons Come to Twitter, Thanks to Square\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49ddc730/sc/28/l/0L0Swired0N0C20A150C0A90Ctwitter0Esquare0Ecampaign0Edonations0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/Twitter_donation1-660x410.jpg\\\" alt=\\\"Campaign Donation Buttons Come to Twitter, Thanks to Square\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;It's could be a new frontier for mobile donations.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/twitter-square-campaign-donations/\\\"\\u0026gt;Campaign Donation Buttons Come to Twitter, Thanks to Square\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385858295/u/0/f/661370/c/35185/s/49ddc730/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49ddc730/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/twitter-square-campaign-donations/#comments\",\"pubDate\":\"2015-09-15T06:03:51-07:00\",\"category\":\"election 2016\",\"guid\":\"http://www.wired.com/?p=1851531\",\"dc_creator\":\"Issie Lapowsky\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49ddc730/sc/28/l/0L0Swired0N0C20A150C0A90Ctwitter0Esquare0Ecampaign0Edonations0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 13:03:51 UTC +00:00], ["title", "Campaign Donation Buttons Come to Twitter, Thanks to Square"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1850117"], ["json", "{\"title\":\"Here Is Your WIRED Star Wars Challenge for Day 135\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49ddc73b/sc/27/l/0L0Swired0N0C20A150C0A90Cstar0Ewars0Echallenge0Eday0E1350C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/images_blogs/underwire/2011/01/robot_roundup_02-660x314.jpg\\\" alt=\\\"Here Is Your WIRED Star Wars Challenge for Day 135\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;What's the word for bilingual, but with six million?\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/star-wars-challenge-day-135/\\\"\\u0026gt;Here Is Your WIRED \\u0026lt;em\\u0026gt;Star Wars\\u0026lt;/em\\u0026gt; Challenge for Day 135\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385858294/u/0/f/661370/c/35185/s/49ddc73b/sc/27/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49ddc73b/sc/27/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/star-wars-challenge-day-135/#comments\",\"pubDate\":\"2015-09-15T06:00:43-07:00\",\"category\":\"star wars\",\"guid\":\"http://www.wired.com/?p=1850117\",\"dc_creator\":\"Wired Staff\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49ddc73b/sc/27/l/0L0Swired0N0C20A150C0A90Cstar0Ewars0Echallenge0Eday0E1350C/story01.htm"], ["published_at", Tue, 15 Sep 2015 13:00:43 UTC +00:00], ["title", "Here Is Your WIRED Star Wars Challenge for Day 135"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851435"], ["json", "{\"title\":\"Tech Workers Are Way Picky About The Cities They’ll Work In\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49ddc746/sc/28/l/0L0Swired0N0C20A150C0A90Ctech0Eworkers0Eway0Epicky0Ecities0Etheyll0Ework0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/GettyImages-472570184-660x495.jpg\\\" alt=\\\"Tech Workers Are Way Picky About The Cities They\\u0026amp;#8217;ll Work In\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Jobs in tech are going unfilled. New research suggests that's partly because job seekers aren't looking in that many places.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/tech-workers-way-picky-cities-theyll-work/\\\"\\u0026gt;Tech Workers Are Way Picky About The Cities They\\u0026amp;#8217;ll Work In\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385858293/u/0/f/661370/c/35185/s/49ddc746/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49ddc746/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/tech-workers-way-picky-cities-theyll-work/#comments\",\"pubDate\":\"2015-09-15T06:00:26-07:00\",\"category\":\"talent gap\",\"guid\":\"http://www.wired.com/?p=1851435\",\"dc_creator\":\"Davey Alba\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49ddc746/sc/28/l/0L0Swired0N0C20A150C0A90Ctech0Eworkers0Eway0Epicky0Ecities0Etheyll0Ework0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 13:00:26 UTC +00:00], ["title", "Tech Workers Are Way Picky About The Cities They’ll Work In"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1842291"], ["json", "{\"title\":\"Technology Is Really Starting to Creep Us Out\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49de08a2/sc/28/l/0L0Swired0N0C20A150C0A90Ctechnology0Ereally0Estarting0Ecreep0Eus0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/07/GettyImages-547023611-660x495.jpg\\\" alt=\\\"Technology Is Really Starting to Creep Us Out\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;When online ads get too personalized, people find them stalkerish. When recommendation systems are too spot-on, they’re unsettling.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/technology-really-starting-creep-us/\\\"\\u0026gt;Technology Is \\u0026lt;em\\u0026gt;Really\\u0026lt;/em\\u0026gt; Starting to Creep Us Out\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385787344/u/0/f/661370/c/35185/s/49de08a2/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49de08a2/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/technology-really-starting-creep-us/#comments\",\"pubDate\":\"2015-09-15T05:40:18-07:00\",\"category\":\"Design\",\"guid\":\"http://www.wired.com/?p=1842291\",\"dc_creator\":\"Clive Thompson\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49de08a2/sc/28/l/0L0Swired0N0C20A150C0A90Ctechnology0Ereally0Estarting0Ecreep0Eus0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 12:40:18 UTC +00:00], ["title", "Technology Is Really Starting to Creep Us Out"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1842292"], ["json", "{\"title\":\"The Buy Button Is the Most Important Icon on the Internet\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dde601/sc/28/l/0L0Swired0N0C20A150C0A90Cbuy0Ebutton0Eimportant0Eicon0Einternet0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/button-push-FEATURE-ART-660x371.jpg\\\" alt=\\\"The Buy Button Is the Most Important Icon on the Internet\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Up to $4 trillion worth of merchandise will languish unpurchased in online shopping carts this year. No wonder trying to build a frictionless buy button remains a crucial effort in online commerce.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/buy-button-important-icon-internet/\\\"\\u0026gt;The Buy Button Is the Most Important Icon on the Internet\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385834869/u/0/f/661370/c/35185/s/49dde601/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dde601/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/buy-button-important-icon-internet/#comments\",\"pubDate\":\"2015-09-15T05:35:40-07:00\",\"category\":\"Facebook\",\"guid\":\"http://www.wired.com/?p=1842292\",\"dc_creator\":\"Michael Silverberg\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dde601/sc/28/l/0L0Swired0N0C20A150C0A90Cbuy0Ebutton0Eimportant0Eicon0Einternet0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 12:35:40 UTC +00:00], ["title", "The Buy Button Is the Most Important Icon on the Internet"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1842290"], ["json", "{\"title\":\"Strip Down Your Logo and Make Your Brand a Classic—Now!\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dde607/sc/15/l/0L0Swired0N0C20A150C0A90Cstrip0Elogo0Emake0Ebrand0Eclassic0Enow0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/Untitled-1-660x330.jpg\\\" alt=\\\"Strip Down Your Logo and Make Your Brand a Classic\\u0026amp;#8212;Now!\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;From Airbnb to Snapchat, companies are racing to create sleek, name-free logos that are still instantly recognizable.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/strip-logo-make-brand-classic-now/\\\"\\u0026gt;Strip Down Your Logo and Make Your Brand a Classic\\u0026amp;#8212;Now!\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385834868/u/0/f/661370/c/35185/s/49dde607/sc/15/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dde607/sc/15/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/strip-logo-make-brand-classic-now/#comments\",\"pubDate\":\"2015-09-15T05:30:42-07:00\",\"category\":\"Design\",\"guid\":\"http://www.wired.com/?p=1842290\",\"dc_creator\":\"Margaret Rhodes\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dde607/sc/15/l/0L0Swired0N0C20A150C0A90Cstrip0Elogo0Emake0Ebrand0Eclassic0Enow0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 12:30:42 UTC +00:00], ["title", "Strip Down Your Logo and Make Your Brand a Classic—Now!"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1842293"], ["json", "{\"title\":\"Type Is Crucial for the User Experience: An Expert Analysis\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dde60c/sc/28/l/0L0Swired0N0C20A150C0A90Ctype0Ecrucial0Euser0Eexperience0Eexpert0Eanalysis0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/typography-FEATURE-ART-660x371.jpg\\\" alt=\\\"Type Is Crucial for the User Experience: An Expert Analysis\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Apple has San Francisco, originally built for the Apple Watch and now the company’s default typeface. Google designed Roboto for all things Android. And Microsoft writes its UI text in Segoe.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/type-crucial-user-experience-expert-analysis/\\\"\\u0026gt;Type Is Crucial for the User Experience: An Expert Analysis\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385834867/u/0/f/661370/c/35185/s/49dde60c/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dde60c/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/type-crucial-user-experience-expert-analysis/#comments\",\"pubDate\":\"2015-09-15T05:30:41-07:00\",\"category\":\"apple\",\"guid\":\"http://www.wired.com/?p=1842293\",\"dc_creator\":\"Belinda Lanks\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dde60c/sc/28/l/0L0Swired0N0C20A150C0A90Ctype0Ecrucial0Euser0Eexperience0Eexpert0Eanalysis0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 12:30:41 UTC +00:00], ["title", "Type Is Crucial for the User Experience: An Expert Analysis"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1850874"], ["json", "{\"title\":\"The Pickup Truck of Electric Bikes May Be Better Than a Car\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49ddb906/sc/19/l/0L0Swired0N0C20A150C0A90Cpickup0Etruck0Eelectric0Ebikes0Emay0Ebetter0Ecar0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/10E_small_freight__77944.1428017663.920.600-660x330.jpg\\\" alt=\\\"The Pickup Truck of Electric Bikes May Be Better Than a Car\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Meet the Ford F150 of bicycles. \\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/pickup-truck-electric-bikes-may-better-car/\\\"\\u0026gt;The Pickup Truck of Electric Bikes May Be Better Than a Car\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385854795/u/0/f/661370/c/35185/s/49ddb906/sc/19/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49ddb906/sc/19/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/pickup-truck-electric-bikes-may-better-car/#comments\",\"pubDate\":\"2015-09-15T05:00:45-07:00\",\"category\":\"Gadget Lab\",\"guid\":\"http://www.wired.com/?p=1850874\",\"dc_creator\":\"David Pierce\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49ddb906/sc/19/l/0L0Swired0N0C20A150C0A90Cpickup0Etruck0Eelectric0Ebikes0Emay0Ebetter0Ecar0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 12:00:45 UTC +00:00], ["title", "The Pickup Truck of Electric Bikes May Be Better Than a Car"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1850878"], ["json", "{\"title\":\"This Company Is Using DNA to Sniff Out Contaminated Food\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dda802/sc/26/l/0L0Swired0N0C20A150C0A90Ccompany0Eusing0Edna0Esniff0Econtaminated0Efood0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/Screen-Shot-2015-09-14-at-2.10.25-PM-660x371.jpg\\\" alt=\\\"This Company Is Using DNA to Sniff Out Contaminated Food\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;The food in the freezer at Clear Labs isn't for eating. It's for analyzing. \\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/company-using-dna-sniff-contaminated-food/\\\"\\u0026gt;This Company Is Using DNA to Sniff Out Contaminated Food\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385750732/u/0/f/661370/c/35185/s/49dda802/sc/26/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dda802/sc/26/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/company-using-dna-sniff-contaminated-food/#comments\",\"pubDate\":\"2015-09-15T04:30:33-07:00\",\"category\":\"FDA\",\"guid\":\"http://www.wired.com/?p=1850878\",\"dc_creator\":\"Katie M. Palmer\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dda802/sc/26/l/0L0Swired0N0C20A150C0A90Ccompany0Eusing0Edna0Esniff0Econtaminated0Efood0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 11:30:33 UTC +00:00], ["title", "This Company Is Using DNA to Sniff Out Contaminated Food"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1851156"], ["json", "{\"title\":\"World’s First VR Film Festival Takes You to a Real War Zone\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dd13ba/sc/23/l/0L0Swired0N0C20A150C0A90Cvr0Efilm0Efestival0Ewelcome0Eto0Ealeppo0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/iPhone-Journalism-Kit-Bangladesh1-660x660.jpg\\\" alt=\\\"World\\u0026amp;#8217;s First VR Film Festival Takes You to a Real War Zone\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;RYOT's \\\"Welcome to Aleppo\\\" takes viewers inside the devastating Syrian conflict.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/vr-film-festival-welcome-to-aleppo/\\\"\\u0026gt;World\\u0026amp;#8217;s First VR Film Festival Takes You to a Real War Zone\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385747976/u/0/f/661370/c/35185/s/49dd13ba/sc/23/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dd13ba/sc/23/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/vr-film-festival-welcome-to-aleppo/#comments\",\"pubDate\":\"2015-09-15T04:00:51-07:00\",\"category\":\"virtual reality filmmaking\",\"guid\":\"http://www.wired.com/?p=1851156\",\"dc_creator\":\"Alessandra Ram\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dd13ba/sc/23/l/0L0Swired0N0C20A150C0A90Cvr0Efilm0Efestival0Ewelcome0Eto0Ealeppo0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 11:00:51 UTC +00:00], ["title", "World’s First VR Film Festival Takes You to a Real War Zone"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1847266"], ["json", "{\"title\":\"You Can’t Understand Design Without Experiencing These 14 Classic Works\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dd13c1/sc/28/l/0L0Swired0N0C20A150C0A90Ccant0Eunderstand0Edesign0Ewithout0Eexperiencing0E140Eclassic0Eworks0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/objectified-660x495.jpg\\\" alt=\\\"You Can\\u0026amp;#8217;t Understand Design Without Experiencing These 14 Classic Works\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Here’s some essential background material for helping you understand the world of design today.\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/cant-understand-design-without-experiencing-14-classic-works/\\\"\\u0026gt;You Can\\u0026amp;#8217;t Understand Design Without Experiencing These 14 Classic Works\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385747975/u/0/f/661370/c/35185/s/49dd13c1/sc/28/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dd13c1/sc/28/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/cant-understand-design-without-experiencing-14-classic-works/#comments\",\"pubDate\":\"2015-09-15T04:00:41-07:00\",\"category\":\"gallery\",\"guid\":\"http://www.wired.com/?p=1847266\",\"dc_creator\":\"Wired Staff\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dd13c1/sc/28/l/0L0Swired0N0C20A150C0A90Ccant0Eunderstand0Edesign0Ewithout0Eexperiencing0E140Eclassic0Eworks0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 11:00:41 UTC +00:00], ["title", "You Can’t Understand Design Without Experiencing These 14 Classic Works"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00], ["feed_id", 2], ["guid", "http://www.wired.com/?p=1850980"], ["json", "{\"title\":\"Who Invented the Fountain Pen? Emoji Can Tell You\",\"link\":\"http://feeds.wired.com/c/35185/f/661370/s/49dd13cb/sc/15/l/0L0Swired0N0C20A150C0A90Cemoji0Einvention0C/story01.htm\",\"description\":\"\\u0026lt;div class=\\\"rss_thumbnail\\\"\\u0026gt;\\u0026lt;img src=\\\"http://www.wired.com/wp-content/uploads/2015/09/objects-0057-660x330.jpg\\\" alt=\\\"Who Invented the Fountain Pen? Emoji Can Tell You\\\" /\\u0026gt;\\u0026lt;/div\\u0026gt;\\u0026lt;p\\u0026gt;Who knew emoji could be useful beyond sprucing up your text messages?\\u0026lt;/p\\u0026gt; \\u0026lt;p\\u0026gt;The post \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com/2015/09/emoji-invention/\\\"\\u0026gt;Who Invented the Fountain Pen? Emoji Can Tell You\\u0026lt;/a\\u0026gt; appeared first on \\u0026lt;a rel=\\\"nofollow\\\" href=\\\"http://www.wired.com\\\"\\u0026gt;WIRED\\u0026lt;/a\\u0026gt;.\\u0026lt;/p\\u0026gt;\\u0026lt;br clear='all'/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/rc/1/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/rc/1/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/rc/2/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/rc/2/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://rc.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/rc/3/rc.htm\\\" rel=\\\"nofollow\\\"\\u0026gt;\\u0026lt;img src=\\\"http://rc.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/rc/3/rc.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://da.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/a2.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://da.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/a2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;br/\\u0026gt;\\u0026lt;a href=\\\"http://adchoice.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/ach.htm\\\"\\u0026gt;\\u0026lt;img src=\\\"http://adchoice.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/ach.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;/a\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/a2t.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width=\\\"1\\\" height=\\\"1\\\" src=\\\"http://pi2.feedsportal.com/r/238385747974/u/0/f/661370/c/35185/s/49dd13cb/sc/15/a2t2.img\\\" border=\\\"0\\\"/\\u0026gt;\\u0026lt;img width='1' height='1' src='http://feeds.wired.com/c/35185/f/661370/s/49dd13cb/sc/15/mf.gif' border='0'/\\u0026gt;\",\"comments\":\"http://www.wired.com/2015/09/emoji-invention/#comments\",\"pubDate\":\"2015-09-15T04:00:38-07:00\",\"category\":\"Gadget Lab\",\"guid\":\"http://www.wired.com/?p=1850980\",\"dc_creator\":\"Molly McHugh\"}"], ["link", "http://feeds.wired.com/c/35185/f/661370/s/49dd13cb/sc/15/l/0L0Swired0N0C20A150C0A90Cemoji0Einvention0C/story01.htm"], ["published_at", Tue, 15 Sep 2015 11:00:38 UTC +00:00], ["title", "Who Invented the Fountain Pen? Emoji Can Tell You"], ["updated_at", Tue, 15 Sep 2015 17:29:53 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mEntry Load (2.1ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 2]]
+Completed 200 OK in 673ms (Views: 615.2ms | ActiveRecord: 57.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-15 11:35:08 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 91ms (Views: 89.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:09 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 11:35:10 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (91.1ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 93ms (Views: 1.6ms | ActiveRecord: 91.1ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2015-09-15 11:35:12 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (35.2ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSQL (61.3ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-09-15 18:35:12.111747' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (30.0ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342110"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:35:10+00:00\",\"link\":\"http://example.com/test/1442342110\",\"description\":\"Aliquip non minim sint occaecat reprehenderit veniam.\",\"pubDate\":\"2015-09-15T11:35:10-07:00\",\"guid\":\"http://example.com/test/1442342110\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342110"], ["published_at", Tue, 15 Sep 2015 18:35:10 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:35:10+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342100"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:35:00+00:00\",\"link\":\"http://example.com/test/1442342100\",\"description\":\"Laboris elit officia eiusmod deserunt id cillum.\",\"pubDate\":\"2015-09-15T11:35:00-07:00\",\"guid\":\"http://example.com/test/1442342100\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342100"], ["published_at", Tue, 15 Sep 2015 18:35:00 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:35:00+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342090"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:34:50+00:00\",\"link\":\"http://example.com/test/1442342090\",\"description\":\"Exercitation dolor labore velit consequat cillum eu irure cillum ipsum sit velit.\",\"pubDate\":\"2015-09-15T11:34:50-07:00\",\"guid\":\"http://example.com/test/1442342090\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342090"], ["published_at", Tue, 15 Sep 2015 18:34:50 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:34:50+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342080"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:34:40+00:00\",\"link\":\"http://example.com/test/1442342080\",\"description\":\"Nulla officia magna consectetur dolor.\",\"pubDate\":\"2015-09-15T11:34:40-07:00\",\"guid\":\"http://example.com/test/1442342080\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342080"], ["published_at", Tue, 15 Sep 2015 18:34:40 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:34:40+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342070"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:34:30+00:00\",\"link\":\"http://example.com/test/1442342070\",\"description\":\"Est laborum fugiat labore magna irure labore dolor nostrud laborum eu.\",\"pubDate\":\"2015-09-15T11:34:30-07:00\",\"guid\":\"http://example.com/test/1442342070\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342070"], ["published_at", Tue, 15 Sep 2015 18:34:30 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:34:30+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342060"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:34:20+00:00\",\"link\":\"http://example.com/test/1442342060\",\"description\":\"Aliqua duis cillum aliquip eu nostrud dolor labore ad tempor commodo duis velit labore.\",\"pubDate\":\"2015-09-15T11:34:20-07:00\",\"guid\":\"http://example.com/test/1442342060\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342060"], ["published_at", Tue, 15 Sep 2015 18:34:20 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:34:20+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342050"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:34:10+00:00\",\"link\":\"http://example.com/test/1442342050\",\"description\":\"Dolor ex qui sunt occaecat nulla in aliquip aliqua nostrud.\",\"pubDate\":\"2015-09-15T11:34:10-07:00\",\"guid\":\"http://example.com/test/1442342050\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342050"], ["published_at", Tue, 15 Sep 2015 18:34:10 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:34:10+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342040"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:34:00+00:00\",\"link\":\"http://example.com/test/1442342040\",\"description\":\"Aliquip sit Lorem officia esse dolore sint exercitation fugiat mollit.\",\"pubDate\":\"2015-09-15T11:34:00-07:00\",\"guid\":\"http://example.com/test/1442342040\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342040"], ["published_at", Tue, 15 Sep 2015 18:34:00 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:34:00+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342030"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:33:50+00:00\",\"link\":\"http://example.com/test/1442342030\",\"description\":\"Ullamco do nisi quis deserunt qui sint quis dolor.\",\"pubDate\":\"2015-09-15T11:33:50-07:00\",\"guid\":\"http://example.com/test/1442342030\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342030"], ["published_at", Tue, 15 Sep 2015 18:33:50 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:33:50+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342020"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:33:40+00:00\",\"link\":\"http://example.com/test/1442342020\",\"description\":\"Nisi ea proident esse officia minim laborum elit non sit dolor est.\",\"pubDate\":\"2015-09-15T11:33:40-07:00\",\"guid\":\"http://example.com/test/1442342020\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342020"], ["published_at", Tue, 15 Sep 2015 18:33:40 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:33:40+00:00"], ["updated_at", Tue, 15 Sep 2015 18:35:12 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mEntry Load (0.7ms)[0m  [1mSELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1[0m  [["feed_id", 1]]
+Completed 200 OK in 492ms (Views: 353.4ms | ActiveRecord: 137.6ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 11:36:38 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2015-09-15 11:39:03 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSQL (0.7ms)[0m  UPDATE "feeds" SET "updated_at" = '2015-09-15 18:39:03.381194' WHERE "feeds"."id" = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT "entries"."guid" FROM "entries"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342340"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:39:00+00:00\",\"link\":\"http://example.com/test/1442342340\",\"description\":\"Mollit sit nulla voluptate labore aute culpa ea quis amet in irure ut ex.\",\"pubDate\":\"2015-09-15T11:39:00-07:00\",\"guid\":\"http://example.com/test/1442342340\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342340"], ["published_at", Tue, 15 Sep 2015 18:39:00 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:39:00+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342330"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:38:50+00:00\",\"link\":\"http://example.com/test/1442342330\",\"description\":\"Ea nostrud nostrud adipisicing pariatur non nulla amet.\",\"pubDate\":\"2015-09-15T11:38:50-07:00\",\"guid\":\"http://example.com/test/1442342330\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342330"], ["published_at", Tue, 15 Sep 2015 18:38:50 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:38:50+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342320"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:38:40+00:00\",\"link\":\"http://example.com/test/1442342320\",\"description\":\"Minim non esse eu duis amet elit.\",\"pubDate\":\"2015-09-15T11:38:40-07:00\",\"guid\":\"http://example.com/test/1442342320\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342320"], ["published_at", Tue, 15 Sep 2015 18:38:40 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:38:40+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342310"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:38:30+00:00\",\"link\":\"http://example.com/test/1442342310\",\"description\":\"Commodo cupidatat est consequat cillum est commodo cillum ullamco ipsum mollit excepteur.\",\"pubDate\":\"2015-09-15T11:38:30-07:00\",\"guid\":\"http://example.com/test/1442342310\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342310"], ["published_at", Tue, 15 Sep 2015 18:38:30 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:38:30+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342300"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:38:20+00:00\",\"link\":\"http://example.com/test/1442342300\",\"description\":\"Nostrud dolor ex consequat do duis laboris voluptate elit aute reprehenderit culpa.\",\"pubDate\":\"2015-09-15T11:38:20-07:00\",\"guid\":\"http://example.com/test/1442342300\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342300"], ["published_at", Tue, 15 Sep 2015 18:38:20 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:38:20+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342290"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:38:10+00:00\",\"link\":\"http://example.com/test/1442342290\",\"description\":\"Do cupidatat proident pariatur qui fugiat sit laboris dolor nostrud ex quis irure est.\",\"pubDate\":\"2015-09-15T11:38:10-07:00\",\"guid\":\"http://example.com/test/1442342290\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342290"], ["published_at", Tue, 15 Sep 2015 18:38:10 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:38:10+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342280"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:38:00+00:00\",\"link\":\"http://example.com/test/1442342280\",\"description\":\"Voluptate tempor nulla amet qui anim do magna commodo fugiat officia nostrud.\",\"pubDate\":\"2015-09-15T11:38:00-07:00\",\"guid\":\"http://example.com/test/1442342280\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342280"], ["published_at", Tue, 15 Sep 2015 18:38:00 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:38:00+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342270"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:37:50+00:00\",\"link\":\"http://example.com/test/1442342270\",\"description\":\"Ex nulla proident id laborum velit tempor ex veniam.\",\"pubDate\":\"2015-09-15T11:37:50-07:00\",\"guid\":\"http://example.com/test/1442342270\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342270"], ["published_at", Tue, 15 Sep 2015 18:37:50 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:37:50+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342260"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:37:40+00:00\",\"link\":\"http://example.com/test/1442342260\",\"description\":\"Enim et ad nulla officia aute magna.\",\"pubDate\":\"2015-09-15T11:37:40-07:00\",\"guid\":\"http://example.com/test/1442342260\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342260"], ["published_at", Tue, 15 Sep 2015 18:37:40 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:37:40+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342250"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:37:30+00:00\",\"link\":\"http://example.com/test/1442342250\",\"description\":\"Minim consequat mollit nulla mollit amet laboris deserunt excepteur reprehenderit dolor occaecat.\",\"pubDate\":\"2015-09-15T11:37:30-07:00\",\"guid\":\"http://example.com/test/1442342250\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342250"], ["published_at", Tue, 15 Sep 2015 18:37:30 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:37:30+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:03 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mEntry Load (0.7ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 1]]
+Completed 200 OK in 305ms (Views: 292.1ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1[0m
+Completed 200 OK in 68ms (Views: 67.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+
+
+Started GET "/api/feeds/1" for 127.0.0.1 at 2015-09-15 11:39:37 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-09-15 18:39:37.313845' WHERE "feeds"."id" = 1[0m
+  [1m[35m (0.5ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342370"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:39:30+00:00\",\"link\":\"http://example.com/test/1442342370\",\"description\":\"Est laborum sint duis ea veniam non.\",\"pubDate\":\"2015-09-15T11:39:30-07:00\",\"guid\":\"http://example.com/test/1442342370\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342370"], ["published_at", Tue, 15 Sep 2015 18:39:30 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:39:30+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:37 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:39:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342360"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:39:20+00:00\",\"link\":\"http://example.com/test/1442342360\",\"description\":\"Duis cupidatat ullamco tempor officia veniam culpa eu magna reprehenderit non ut sint labore eiusmod.\",\"pubDate\":\"2015-09-15T11:39:20-07:00\",\"guid\":\"http://example.com/test/1442342360\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342360"], ["published_at", Tue, 15 Sep 2015 18:39:20 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:39:20+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:37 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:39:37 UTC +00:00], ["feed_id", 1], ["guid", "http://example.com/test/1442342350"], ["json", "{\"title\":\"Lorem ipsum 2015-09-15T18:39:10+00:00\",\"link\":\"http://example.com/test/1442342350\",\"description\":\"In cupidatat nostrud anim amet ex Lorem nostrud exercitation.\",\"pubDate\":\"2015-09-15T11:39:10-07:00\",\"guid\":\"http://example.com/test/1442342350\",\"dc_creator\":\"John Smith\"}"], ["link", "http://example.com/test/1442342350"], ["published_at", Tue, 15 Sep 2015 18:39:10 UTC +00:00], ["title", "Lorem ipsum 2015-09-15T18:39:10+00:00"], ["updated_at", Tue, 15 Sep 2015 18:39:37 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mEntry Load (0.8ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 1]]
+Completed 200 OK in 263ms (Views: 256.8ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 11:43:25 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (1.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/feeds/3" for 127.0.0.1 at 2015-09-15 11:43:27 -0700
+Processing by Api::FeedsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[35mFeed Load (0.4ms)[0m  SELECT "feeds".* FROM "feeds" WHERE "feeds"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "feeds" SET "updated_at" = '2015-09-15 18:43:27.416267' WHERE "feeds"."id" = 3[0m
+  [1m[35m (0.5ms)[0m  SELECT "entries"."guid" FROM "entries"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thesalt/2015/09/15/440335039/before-green-tea-was-a-superfood-it-was-feared-as-a-super-toxin?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Before Green Tea Was A Superfood, It Was Feared As a Supertoxin\",\"link\":\"http://www.npr.org/sections/thesalt/2015/09/15/440335039/before-green-tea-was-a-superfood-it-was-feared-as-a-super-toxin?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"These days, green tea has its health halo pretty firmly affixed. But in Victorian England, adulteration was rampant, and the drink was seen as a \\\"stomach-churning, nerve-jangling threat to health.\\\"\",\"content_encoded\":\"\\u003Cp\\u003EThese days, green tea has its health halo pretty firmly affixed. But in Victorian England, adulteration was rampant, and the drink was seen as a \\\"stomach-churning, nerve-jangling threat to health.\\\"\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440335039\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T10:48:00-07:00\",\"guid\":\"http://www.npr.org/sections/thesalt/2015/09/15/440335039/before-green-tea-was-a-superfood-it-was-feared-as-a-super-toxin?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Nina Martyris\"}"], ["link", "http://www.npr.org/sections/thesalt/2015/09/15/440335039/before-green-tea-was-a-superfood-it-was-feared-as-a-super-toxin?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 17:48:00 UTC +00:00], ["title", "Before Green Tea Was A Superfood, It Was Feared As a Supertoxin"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/itsallpolitics/2015/09/15/440576995/jeb-bush-superpac-to-spend-24-million-on-ads?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Jeb Bush SuperPAC Going Up With $24 Million In TV Ads\",\"link\":\"http://www.npr.org/sections/itsallpolitics/2015/09/15/440576995/jeb-bush-superpac-to-spend-24-million-on-ads?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The ad wars are about to start in earnest. And the best-funded superPAC is about to dominate the airwaves in support of Jeb Bush.\",\"content_encoded\":\"\\u003Cp\\u003EThe ad wars are about to start in earnest. And the best-funded superPAC is about to dominate the airwaves in support of Jeb Bush.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440576995\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T10:41:00-07:00\",\"guid\":\"http://www.npr.org/sections/itsallpolitics/2015/09/15/440576995/jeb-bush-superpac-to-spend-24-million-on-ads?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Domenico Montanaro\"}"], ["link", "http://www.npr.org/sections/itsallpolitics/2015/09/15/440576995/jeb-bush-superpac-to-spend-24-million-on-ads?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 17:41:00 UTC +00:00], ["title", "Jeb Bush SuperPAC Going Up With $24 Million In TV Ads"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thetwo-way/2015/09/15/440576022/bin-laden-company-banned-from-work-in-mecca-after-crane-disaster?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Bin Laden Company Banned From Work In Mecca After Crane Disaster\",\"link\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440576022/bin-laden-company-banned-from-work-in-mecca-after-crane-disaster?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"A Saudi royal court says the Saudi Binladen Group, which has operated in the kingdom since the 1930s, can't pursue new projects until an inquiry is closed.\",\"content_encoded\":\"\\u003Cp\\u003EA Saudi royal court says the Saudi Binladen Group, which has operated in the kingdom since the 1930s, can't pursue new projects until an inquiry is closed.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440576022\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T10:31:00-07:00\",\"guid\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440576022/bin-laden-company-banned-from-work-in-mecca-after-crane-disaster?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Bill Chappell\"}"], ["link", "http://www.npr.org/sections/thetwo-way/2015/09/15/440576022/bin-laden-company-banned-from-work-in-mecca-after-crane-disaster?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 17:31:00 UTC +00:00], ["title", "Bin Laden Company Banned From Work In Mecca After Crane Disaster"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/ed/2015/09/15/439467590/where-to-live-when-youre-a-college-student?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Where To Live When You're A College Student\",\"link\":\"http://www.npr.org/sections/ed/2015/09/15/439467590/where-to-live-when-youre-a-college-student?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"We hear a lot about the cost of college getting out of control. The fact is, on many college campuses the cost of room and board is actually more than the cost of tuition.\",\"content_encoded\":\"\\u003Cp\\u003EWe hear a lot about the cost of college getting out of control. The fact is, on many college campuses the cost of room and board is actually more than the cost of tuition.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=439467590\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T10:23:39-07:00\",\"guid\":\"http://www.npr.org/sections/ed/2015/09/15/439467590/where-to-live-when-youre-a-college-student?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Reema Khrais\"}"], ["link", "http://www.npr.org/sections/ed/2015/09/15/439467590/where-to-live-when-youre-a-college-student?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 17:23:39 UTC +00:00], ["title", "Where To Live When You're A College Student"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/health-shots/2015/09/15/437533272/small-changes-by-employers-can-raise-workers-health-costs?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Small Changes By Employers Can Raise Workers' Health Costs\",\"link\":\"http://www.npr.org/sections/health-shots/2015/09/15/437533272/small-changes-by-employers-can-raise-workers-health-costs?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"As the enrollment window opens for employer-provided health insurance, workers may see changes for wellness programs, dependents' coverage and specialty drugs that could be costly.\",\"content_encoded\":\"\\u003Cp\\u003EAs the enrollment window opens for employer-provided health insurance, workers may see changes for wellness programs, dependents' coverage and specialty drugs that could be costly.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=437533272\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T10:00:00-07:00\",\"guid\":\"http://www.npr.org/sections/health-shots/2015/09/15/437533272/small-changes-by-employers-can-raise-workers-health-costs?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Michelle Andrews\"}"], ["link", "http://www.npr.org/sections/health-shots/2015/09/15/437533272/small-changes-by-employers-can-raise-workers-health-costs?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 17:00:00 UTC +00:00], ["title", "Small Changes By Employers Can Raise Workers' Health Costs"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thesalt/2015/09/15/440327243/in-divided-nicaragua-national-dish-brings-rich-and-poor-together?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"In Divided Nicaragua, National Dish Brings Rich And Poor Together\",\"link\":\"http://www.npr.org/sections/thesalt/2015/09/15/440327243/in-divided-nicaragua-national-dish-brings-rich-and-poor-together?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Nicaragua's civil war and dictatorship exacerbated social problems and economic disparity. But the richest and the poorest eat vigorón, a hearty dish of yucca and pork, side by side.\",\"content_encoded\":\"\\u003Cp\\u003ENicaragua's civil war and dictatorship exacerbated social problems and economic disparity. But the richest and the poorest eat vigorón, a hearty dish of yucca and pork, side by side.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440327243\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T09:54:00-07:00\",\"guid\":\"http://www.npr.org/sections/thesalt/2015/09/15/440327243/in-divided-nicaragua-national-dish-brings-rich-and-poor-together?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Julie Schwietert Collazo\"}"], ["link", "http://www.npr.org/sections/thesalt/2015/09/15/440327243/in-divided-nicaragua-national-dish-brings-rich-and-poor-together?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 16:54:00 UTC +00:00], ["title", "In Divided Nicaragua, National Dish Brings Rich And Poor Together"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/itsallpolitics/2015/09/15/440545619/-cashtag-twitter-to-allow-direct-campaign-contributions?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"#Cashtag: Twitter To Allow Direct Campaign Contributions\",\"link\":\"http://www.npr.org/sections/itsallpolitics/2015/09/15/440545619/-cashtag-twitter-to-allow-direct-campaign-contributions?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The announcement is welcome news for political campaigns, which all want to make it as seamless as possible for supporters to turn over their money and personal information.\",\"content_encoded\":\"\\u003Cp\\u003EThe announcement is welcome news for political campaigns, which all want to make it as seamless as possible for supporters to turn over their money and personal information.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440545619\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T09:34:00-07:00\",\"guid\":\"http://www.npr.org/sections/itsallpolitics/2015/09/15/440545619/-cashtag-twitter-to-allow-direct-campaign-contributions?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Scott Detrow\"}"], ["link", "http://www.npr.org/sections/itsallpolitics/2015/09/15/440545619/-cashtag-twitter-to-allow-direct-campaign-contributions?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 16:34:00 UTC +00:00], ["title", "#Cashtag: Twitter To Allow Direct Campaign Contributions"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thetwo-way/2015/09/15/439559009/do-you-use-money-if-so-youll-want-to-read-this-by-thursday?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Do You Use Money? If So, You'll Want To Read This By Thursday\",\"link\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/439559009/do-you-use-money-if-so-youll-want-to-read-this-by-thursday?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"This week, the Federal Reserve will be making decisions that could affect your ability to borrow. Because it works behind closed doors, it can seem mysterious. Here's what the Fed is and does.\",\"content_encoded\":\"\\u003Cp\\u003EThis week, the Federal Reserve will be making decisions that could affect your ability to borrow. Because it works behind closed doors, it can seem mysterious. Here's what the Fed is and does.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=439559009\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T08:56:00-07:00\",\"guid\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/439559009/do-you-use-money-if-so-youll-want-to-read-this-by-thursday?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Marilyn Geewax\"}"], ["link", "http://www.npr.org/sections/thetwo-way/2015/09/15/439559009/do-you-use-money-if-so-youll-want-to-read-this-by-thursday?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 15:56:00 UTC +00:00], ["title", "Do You Use Money? If So, You'll Want To Read This By Thursday"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thetwo-way/2015/09/15/440548758/tentative-contract-deal-reached-on-fifth-day-of-seattle-teacher-strike?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Tentative Contract Deal Reached On 5th Day Of Seattle Teacher Strike\",\"link\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440548758/tentative-contract-deal-reached-on-fifth-day-of-seattle-teacher-strike?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Until an agreement is ratified, teachers will remain on strike, the union says. The dispute has kept Seattle's 53,000 students from starting their school year.\",\"content_encoded\":\"\\u003Cp\\u003EUntil an agreement is ratified, teachers will remain on strike, the union says. The dispute has kept Seattle's 53,000 students from starting their school year.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440548758\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T08:46:00-07:00\",\"guid\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440548758/tentative-contract-deal-reached-on-fifth-day-of-seattle-teacher-strike?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Bill Chappell\"}"], ["link", "http://www.npr.org/sections/thetwo-way/2015/09/15/440548758/tentative-contract-deal-reached-on-fifth-day-of-seattle-teacher-strike?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 15:46:00 UTC +00:00], ["title", "Tentative Contract Deal Reached On 5th Day Of Seattle Teacher Strike"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/health-shots/2015/09/15/440532864/fda-orders-four-cigarette-brands-pulled-from-the-market?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"FDA Orders 4 Cigarette Brands Pulled From The Market\",\"link\":\"http://www.npr.org/sections/health-shots/2015/09/15/440532864/fda-orders-four-cigarette-brands-pulled-from-the-market?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"The Food and Drug Administration exercised its regulatory power to compel a tobacco company to stop selling cigarettes after the maker failed to show they don't raise new public health issues.\",\"content_encoded\":\"\\u003Cp\\u003EThe Food and Drug Administration exercised its regulatory power to compel a tobacco company to stop selling cigarettes after the maker failed to show they don't raise new public health issues.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440532864\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T08:42:00-07:00\",\"guid\":\"http://www.npr.org/sections/health-shots/2015/09/15/440532864/fda-orders-four-cigarette-brands-pulled-from-the-market?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Rob Stein\"}"], ["link", "http://www.npr.org/sections/health-shots/2015/09/15/440532864/fda-orders-four-cigarette-brands-pulled-from-the-market?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 15:42:00 UTC +00:00], ["title", "FDA Orders 4 Cigarette Brands Pulled From The Market"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/itsallpolitics/2015/09/15/440524281/from-california-a-warning-to-republicans-on-anti-immigration-rhetoric?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"From California, A Warning To Republicans On Anti-Immigration Rhetoric\",\"link\":\"http://www.npr.org/sections/itsallpolitics/2015/09/15/440524281/from-california-a-warning-to-republicans-on-anti-immigration-rhetoric?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"In the 1990s, California passed a ballot measure to deny state services to people in the country illegally. It was overturned, but some say it's responsible for swinging the state heavily Democratic.\",\"content_encoded\":\"\\u003Cp\\u003EIn the 1990s, California passed a ballot measure to deny state services to people in the country illegally. It was overturned, but some say it's responsible for swinging the state heavily Democratic.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440524281\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T08:42:00-07:00\",\"guid\":\"http://www.npr.org/sections/itsallpolitics/2015/09/15/440524281/from-california-a-warning-to-republicans-on-anti-immigration-rhetoric?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Ina Jaffe\"}"], ["link", "http://www.npr.org/sections/itsallpolitics/2015/09/15/440524281/from-california-a-warning-to-republicans-on-anti-immigration-rhetoric?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 15:42:00 UTC +00:00], ["title", "From California, A Warning To Republicans On Anti-Immigration Rhetoric"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/npr-history-dept/2015/09/15/437212758/3-crazy-crazes-of-the-late-1800s?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"3 Crazy Crazes Of The Late 1800s\",\"link\":\"http://www.npr.org/sections/npr-history-dept/2015/09/15/437212758/3-crazy-crazes-of-the-late-1800s?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Hairpin stealing, ring turning and automobiling — apparently folks in turn-of-the-20th-century America were as fad-prone as we are today.\",\"content_encoded\":\"\\u003Cp\\u003EHairpin stealing, ring turning and automobiling — apparently folks in turn-of-the-20th-century America were as fad-prone as we are today.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=437212758\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T08:03:37-07:00\",\"guid\":\"http://www.npr.org/sections/npr-history-dept/2015/09/15/437212758/3-crazy-crazes-of-the-late-1800s?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Linton Weeks\"}"], ["link", "http://www.npr.org/sections/npr-history-dept/2015/09/15/437212758/3-crazy-crazes-of-the-late-1800s?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 15:03:37 UTC +00:00], ["title", "3 Crazy Crazes Of The Late 1800s"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thetwo-way/2015/09/15/440521318/amazons-bezos-announces-plan-to-build-launch-rockets-from-florida?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Amazon's Bezos Plans To Build, Launch Rockets From Florida\",\"link\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440521318/amazons-bezos-announces-plan-to-build-launch-rockets-from-florida?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"In announcing a new expansion of commercial efforts to launch earthlings into space, Amazon.com founder and CEO Jeff Bezos says the launch pads at Cape Canaveral have been dormant for too long.\",\"content_encoded\":\"\\u003Cp\\u003EIn announcing a new expansion of commercial efforts to launch earthlings into space, Amazon.com founder and CEO Jeff Bezos says the launch pads at Cape Canaveral have been dormant for too long.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440521318\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T07:49:00-07:00\",\"guid\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440521318/amazons-bezos-announces-plan-to-build-launch-rockets-from-florida?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Bill Chappell\"}"], ["link", "http://www.npr.org/sections/thetwo-way/2015/09/15/440521318/amazons-bezos-announces-plan-to-build-launch-rockets-from-florida?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 14:49:00 UTC +00:00], ["title", "Amazon's Bezos Plans To Build, Launch Rockets From Florida"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/health-shots/2015/09/15/440361621/engineers-create-a-titanium-rib-cage-worthy-of-wolverine?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Engineers Create A Titanium Rib Cage Worthy Of Wolverine\",\"link\":\"http://www.npr.org/sections/health-shots/2015/09/15/440361621/engineers-create-a-titanium-rib-cage-worthy-of-wolverine?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"Doctors say it's the first time a titanium sternum and set of ribs have been made with a 3-D printer. The custom-made device has already been implanted in the chest of a cancer patient in Spain.\",\"content_encoded\":\"\\u003Cp\\u003EDoctors say it's the first time a titanium sternum and set of ribs have been made with a 3-D printer. The custom-made device has already been implanted in the chest of a cancer patient in Spain.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440361621\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T07:44:00-07:00\",\"guid\":\"http://www.npr.org/sections/health-shots/2015/09/15/440361621/engineers-create-a-titanium-rib-cage-worthy-of-wolverine?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Michaeleen Doucleff\"}"], ["link", "http://www.npr.org/sections/health-shots/2015/09/15/440361621/engineers-create-a-titanium-rib-cage-worthy-of-wolverine?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 14:44:00 UTC +00:00], ["title", "Engineers Create A Titanium Rib Cage Worthy Of Wolverine"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "entries" ("created_at", "feed_id", "guid", "json", "link", "published_at", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00], ["feed_id", 3], ["guid", "http://www.npr.org/sections/thetwo-way/2015/09/15/440516013/alabama-senate-approves-shifting-100-million-away-from-schools?utm_medium=RSS&amp;utm_campaign=news"], ["json", "{\"title\":\"Alabama Senate Approves Shifting $100 Million Away From Schools\",\"link\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440516013/alabama-senate-approves-shifting-100-million-away-from-schools?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"description\":\"A critic of the move, which is not yet final, said his colleagues in the Legislature had decided to \\\"rob children\\\" to help cover a budget deficit instead of finding the money elsewhere.\",\"content_encoded\":\"\\u003Cp\\u003EA critic of the move, which is not yet final, said his colleagues in the Legislature had decided to \\\"rob children\\\" to help cover a budget deficit instead of finding the money elsewhere.\\u003C/p\\u003E\\u003Cp\\u003E\\u003Ca href=\\\"http://www.npr.org/templates/email/emailAFriend.php?storyId=440516013\\\"\\u003E\\u0026raquo; E-Mail This\\u003C/a\\u003E\\u003C/p\\u003E\",\"pubDate\":\"2015-09-15T06:45:00-07:00\",\"guid\":\"http://www.npr.org/sections/thetwo-way/2015/09/15/440516013/alabama-senate-approves-shifting-100-million-away-from-schools?utm_medium=RSS\\u0026amp;utm_campaign=news\",\"dc_creator\":\"Bill Chappell\"}"], ["link", "http://www.npr.org/sections/thetwo-way/2015/09/15/440516013/alabama-senate-approves-shifting-100-million-away-from-schools?utm_medium=RSS&amp;utm_campaign=news"], ["published_at", Tue, 15 Sep 2015 13:45:00 UTC +00:00], ["title", "Alabama Senate Approves Shifting $100 Million Away From Schools"], ["updated_at", Tue, 15 Sep 2015 18:43:27 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mEntry Load (0.7ms)[0m  SELECT "entries".* FROM "entries" WHERE "entries"."feed_id" = $1  [["feed_id", 3]]
+Completed 200 OK in 242ms (Views: 222.9ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 11:43:39 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (2.0ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT 1
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/serialize_json.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/entryShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/news_reader.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/models/entry.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/models/feed.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/collections/entries.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/feedShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/views/FeedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/views/FeedShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:11 -0700
+
+
+Started GET "/assets/routers/FeedRouter.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/util/composite_view.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/collections/feeds.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/views/EntryShow.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/assets/feedIndex.js?body=1" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+
+
+Started GET "/api/feeds" for 127.0.0.1 at 2015-09-15 11:46:12 -0700
+Processing by Api::FeedsController#index as JSON
+  [1m[36mFeed Load (0.5ms)[0m  [1mSELECT "feeds".* FROM "feeds" ORDER BY "feeds"."created_at" ASC[0m
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.5ms)

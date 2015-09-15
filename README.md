@@ -1,6 +1,6 @@
-# w7d4: [NewsReader][description]
 
-* [Live Demo](http://aa-newsreader.herokuapp.com/)
+
+* [Live Demo](http://newsrss.herokuapp.com/)
 
 To run locally:
 
@@ -9,7 +9,3 @@ To run locally:
 
 Three feeds with their entries will be created upon running `rake
 db:seed`.
-
-Good luck. Have fun!
-
-[description]: https://github.com/appacademy/backbone-curriculum/blob/master/projects/w7d4-news-reader.md
