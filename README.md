@@ -1,6 +1,6 @@
-![here](http://newsrss.herokuapp.com/)
 
-To view this Live click [here]
+
+To view this Live click [here](http://newsrss.herokuapp.com/)
 
 To run locally:
 
